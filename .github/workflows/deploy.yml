@@ -7,6 +7,10 @@ on:
 
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: apps/web
+
 jobs:
   deployment:
     runs-on: ubuntu-latest
@@ -17,9 +21,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "lts/*"
-          cache: "npm"
-
+          node-version: 'lts/*'
+          cache: 'npm'
+          cache-dependency-path: apps/web/package-lock.json
       - name: Build
         run: |
           npm i
