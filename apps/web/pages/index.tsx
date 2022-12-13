@@ -33,10 +33,10 @@ export default function Web({
 export async function getStaticProps() {
   // const response = await fetch(`${process.env.STRAPI_URL}/api/users`);
   // const data = await response.json();
-  
+
   return {
     props: {
-      user: {},
+      user: { data: 'd' },
     },
   };
 }
