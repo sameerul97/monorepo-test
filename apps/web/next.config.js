@@ -3,6 +3,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = withTM({
   reactStrictMode: true,
+  basePath: isProd ? '/monorepo-test' : '',
   assetPrefix: isProd ? '/your-github-repo-name/' : '',
   images: {
     unoptimized: true,
