@@ -1,4 +1,5 @@
 import { InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
 import { Button } from 'ui';
 
 export default function Web({
@@ -24,6 +25,9 @@ export default function Web({
   return (
     <div>
       <h1>Web www</h1>
+      <h1 className="title">
+        Read <Link href="/project">this page!</Link>
+      </h1>
       <p>{JSON.stringify(user)}</p>
       <Button>Hello World</Button>
     </div>
