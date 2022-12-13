@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react';
+import { InferGetStaticPropsType } from 'next';
 import { Button } from 'ui';
 
-export default function Web() {
-  const [user, setUser] = useState(null);
+export default function Web({
+  user,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  // const [user, setUser] = useState(null);
 
-  const fetchUser = async () => {
-    const response = await fetch('http://localhost:1337/api/users');
-    const data = await response.json();
+  // const fetchUser = async () => {
+  //   const response = await fetch('http://localhost:1337/api/users');
+  //   const data = await response.json();
 
-    setUser(data);
-  };
+  //   setUser(data);
+  // };
 
-  useEffect(() => {
-    fetchUser();
-  }, []);
+  // useEffect(() => {
+  //   fetchUser();
+  // }, []);
 
   if (!user) {
     return <p>Loading</p>;
@@ -26,4 +28,15 @@ export default function Web() {
       <Button>Hello World</Button>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  // const response = await fetch(`${process.env.STRAPI_URL}/api/users`);
+  // const data = await response.json();
+  
+  return {
+    props: {
+      user: {},
+    },
+  };
 }
