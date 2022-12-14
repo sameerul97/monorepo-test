@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build-web": "turbo run build-web",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
