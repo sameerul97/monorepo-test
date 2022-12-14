@@ -5,10 +5,12 @@ const withTM = require("next-transpile-modules")(["ui"]);
 // const withTM = require("next-transpile-modules")([]);
 const isProd = process.env.NODE_ENV === 'production'
 
+const repoName = '/monorepo-test'
+
 module.exports = withTM({
   reactStrictMode: true,
-  basePath: isProd ? '/monorepo-test' : '',
-  assetPrefix: isProd ? '/your-github-repo-name/' : '',
+  basePath: isProd ? repoName : '',
+  assetPrefix: isProd ? repoName : '',
   images: {
     unoptimized: true,
   },
