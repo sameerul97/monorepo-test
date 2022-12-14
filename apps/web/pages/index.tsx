@@ -24,12 +24,15 @@ export default function Web({
 
   return (
     <div>
-      <h1>Web www</h1>
-      <h1 className="title">
-        Read <Link href="/project">this page!</Link>
-      </h1>
-      <p>{JSON.stringify(user)}</p>
-      <Button>Hello World</Button>
+      <h1>Next JS Github Page test with Monorepo</h1>
+      <p className="title">
+        Go to <Link href="/project">Project page!</Link>
+      </p>
+      <p>
+        <strong>Data from <u>getStaticProps</u> </strong>
+        {JSON.stringify(user)}
+      </p>
+      <Button>Buttom in home page from shared package via Storybook</Button>
     </div>
   );
 }
