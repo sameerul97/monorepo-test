@@ -23,6 +23,7 @@
     "tsup": "^5.11.13"
   },
   "scripts": {
+    "build": "tsup src/index.tsx --legacy-output --minify --format esm,cjs --dts --external react",
     "dev": "tsup src/index.tsx --legacy-output --format esm,cjs --watch --dts --external react & start-storybook -p 6007",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "storybook": "start-storybook -p 6007",
