@@ -1,6 +1,6 @@
 import { InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
-import { Button } from 'ui';
+// import { Button } from 'ui';
 
 export default function Web({
   user,
@@ -32,7 +32,7 @@ export default function Web({
         <strong>Data from <u>getStaticProps</u> </strong>
         {JSON.stringify(user)}
       </p>
-      <Button>Buttom in home page from shared package via Storybook</Button>
+      {/* <Button>Buttom in home page from shared package via Storybook</Button> */}
     </div>
   );
 }
