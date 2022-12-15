@@ -17,14 +17,18 @@ const Project: NextPage = () => {
         <h1 className={styles.title}>Project page</h1>
 
         <div className={styles.grid}>
-          <Link className={styles.card} passHref href="/">
-            <h2>Home &rarr;</h2>
-            <p>Go to home Page.</p>
+          <Link passHref href="/">
+            <a className={styles.card}>
+              <h2>Home &rarr;</h2>
+              <p>Go to home Page.</p>
+            </a>
           </Link>
 
-          <Link className={styles.card} passHref href="/about">
-            <h2>About &rarr;</h2>
-            <p>Go to About Page!</p>
+          <Link passHref href="/about">
+            <a className={styles.card}>
+              <h2>About &rarr;</h2>
+              <p>Go to About Page!</p>
+            </a>
           </Link>
         </div>
       </main>
