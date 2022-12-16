@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "install-web": "turbo run install-web",
     "build-web": "turbo run build-web",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
@@ -16,6 +17,8 @@
     "storybook": "turbo run storybook --scope='ui' --no-deps"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
     "prettier": "^2.5.1",
     "turbo": "latest"
   },

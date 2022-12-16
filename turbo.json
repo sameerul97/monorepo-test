@@ -1,6 +1,7 @@
 {
   "pipeline": {
-    "build-web":{
+    "install-web": {},
+    "build-web": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
@@ -15,7 +16,7 @@
       "cache": false
     },
     "storybook": {
-      "cache": false 
+      "cache": false
     }
   }
 }
