@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}> Next.js Github Page!</h1>
+        <h1 className={styles.title}> test Next.js Github Page!</h1>
 
         <div className={styles.grid}>
           <Link passHref href="/project">
