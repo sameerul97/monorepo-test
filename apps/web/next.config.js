@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const isProd = process.env.NODE_ENV === 'production'
-const repoName = '/monorepo-test/next'
+const repoName = '/monorepo-test'
 
 const nextConfig = {
   reactStrictMode: true,
